@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class ChangeFrameColor : MonoBehaviour
 {
-    //Hierarchyからカラーをセット
-    [SerializeField] Color[] Colors;
+    //Inspectorからカラーをセット
+    [SerializeField] Color[] colors;
 
-    Renderer Renderer;
+    [SerializeField] Renderer frameRenderer;
     int CurrentColorIdx;
 
     void Awake()
     {
-        //何度も呼ぶAPIはキャッシュしておく
-        Renderer = GetComponent<Renderer>();
         //始めのカラーを表示
         ChangeMaterialColor();
     }
@@ -25,28 +23,8 @@ public class ChangeFrameColor : MonoBehaviour
 
     void ChangeMaterialColor()
     {
-        Renderer.material.color = Colors[CurrentColorIdx];
+        frameRenderer.material.color = colors[CurrentColorIdx];
         CurrentColorIdx++;
-        if (CurrentColorIdx >= Colors.Length) /*CurrentColorIdx = 0;*/ Destroy(gameObject, 0.2f);
+        if (CurrentColorIdx >= colors.Length) /*CurrentColorIdx = 0;*/ Destroy(gameObject, 0.2f);
     }
 }
-
-
-/*void Start()
-    {
-        //デフォのブロックの色を緑にする
-        GetComponent<Renderer>().material.color = Color.green;
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        //自身(ブロック)に"Player"オブジェクトが当たったとき
-        if (collision.gameObject.name == "Player")
-        {
-            GetComponent<Renderer>().material.color = Color.red;
-            //破壊する(対象：自身のゲームオブジェクト)
-            //Destroy(this.gameObject);
-        }
-    }
-}    
-*/

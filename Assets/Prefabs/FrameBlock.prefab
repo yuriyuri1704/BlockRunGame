@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 4422872268137217478}
   - component: {fileID: 2646397766848844121}
   - component: {fileID: 8193427373808036306}
-  - component: {fileID: -9002413657009230661}
+  - component: {fileID: 4898575325738056002}
+  - component: {fileID: 2465441141404079101}
   m_Layer: 0
   m_Name: FrameBlock
   m_TagString: Ground
@@ -110,7 +111,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.512, y: 0.512}
   m_EdgeRadius: 0
---- !u!114 &-9002413657009230661
+--- !u!114 &4898575325738056002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4367550760317027855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59091a924e13b2247a2789137ab95d89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2465441141404079101
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colors:
-  - {r: 0.07009883, g: 0.8018868, b: 0, a: 1}
-  - {r: 0.90777886, g: 0.9245283, b: 0, a: 1}
-  - {r: 0.8584906, g: 0, b: 0, a: 1}
+  - {r: 0.38614988, g: 1, b: 0, a: 1}
+  - {r: 1, g: 0.977661, b: 0, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
   frameRenderer: {fileID: 2646397766848844121}
